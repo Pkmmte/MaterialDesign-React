@@ -13,6 +13,7 @@ export interface IconProps extends HTMLProps {
   color?: string | null;
   horizontal?: boolean;
   vertical?: boolean;
+  viewBox?: string;
   rotate?: number;
   spin?: boolean | number;
   style?: CSSProperties;

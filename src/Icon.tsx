@@ -15,6 +15,7 @@ export const Icon: FunctionComponent<IconProps> = React.forwardRef<SVGSVGElement
   color = 'currentColor',
   horizontal = false,
   vertical = false,
+  viewBox = '0 0 24 24',
   rotate = 0,
   spin = false,
   style = {} as CSSProperties,
@@ -102,7 +103,7 @@ export const Icon: FunctionComponent<IconProps> = React.forwardRef<SVGSVGElement
   return (
     <svg
       ref={ref}
-      viewBox="0 0 24 24"
+      viewBox={viewBox}
       style={style}
       role={role}
       aria-labelledby={ariaLabelledby}
@@ -128,6 +129,7 @@ Icon.propTypes = {
     PropTypes.string
   ]),
   color: PropTypes.string,
+  viewBox: PropTypes.string,
   horizontal: PropTypes.bool,
   vertical: PropTypes.bool,
   rotate: PropTypes.number,
@@ -147,7 +149,8 @@ Icon.defaultProps = {
   horizontal: false,
   vertical: false,
   rotate: 0,
-  spin: false
+  spin: false,
+  viewBox: '0 0 24 24'
 };
 
 export default Icon;
