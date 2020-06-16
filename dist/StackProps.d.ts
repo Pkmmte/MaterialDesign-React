@@ -8,6 +8,7 @@ export interface StackPropsBase {
     color?: string | null;
     horizontal?: boolean | null;
     vertical?: boolean | null;
+    viewBox?: string | null;
     rotate?: number | null;
     spin?: boolean | number | null;
     style?: CSSProperties;
