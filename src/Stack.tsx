@@ -13,6 +13,7 @@ const Stack: FunctionComponent<StackProps> = React.forwardRef<SVGSVGElement, Sta
   color = 'currentColor',
   horizontal = null,
   vertical = null,
+  viewBox = '0 0 24 24',
   rotate = null,
   spin = null,
   style = {} as CSSProperties,
@@ -35,6 +36,7 @@ const Stack: FunctionComponent<StackProps> = React.forwardRef<SVGSVGElement, Sta
       color: color === null ? childElement.props.color : color,
       horizontal: horizontal === null ? childElement.props.horizontal : horizontal,
       vertical: vertical === null ? childElement.props.vertical : vertical,
+      viewBox: viewBox === null ? childElement.props.viewBox : viewBox,
       rotate: rotate === null ? childElement.props.rotate : rotate,
       spin: spin === null ? childElement.props.spin : spin,
       inStack: true
@@ -63,7 +65,7 @@ const Stack: FunctionComponent<StackProps> = React.forwardRef<SVGSVGElement, Sta
   return (
     <svg
       ref={ref}
-      viewBox="0 0 24 24"
+      viewBox={viewBox}
       style={style}
       role={role}
       aria-labelledby={ariaLabelledby}
