@@ -13,6 +13,7 @@ const Stack: FunctionComponent<StackProps> = React.forwardRef<SVGSVGElement, Sta
   color = 'currentColor',
   horizontal = null,
   vertical = null,
+  preserveAspectRatio = true,
   viewBox = '0 0 24 24',
   rotate = null,
   spin = null,
@@ -36,6 +37,7 @@ const Stack: FunctionComponent<StackProps> = React.forwardRef<SVGSVGElement, Sta
       color: color === null ? childElement.props.color : color,
       horizontal: horizontal === null ? childElement.props.horizontal : horizontal,
       vertical: vertical === null ? childElement.props.vertical : vertical,
+      preserveAspectRatio: preserveAspectRatio === null ? childElement.props.preserveAspectRatio : preserveAspectRatio,
       viewBox: viewBox === null ? childElement.props.viewBox : viewBox,
       rotate: rotate === null ? childElement.props.rotate : rotate,
       spin: spin === null ? childElement.props.spin : spin,
@@ -66,6 +68,7 @@ const Stack: FunctionComponent<StackProps> = React.forwardRef<SVGSVGElement, Sta
     <svg
       ref={ref}
       viewBox={viewBox}
+      preserveAspectRatio={preserveAspectRatio ? undefined : 'none'}
       style={style}
       role={role}
       aria-labelledby={ariaLabelledby}

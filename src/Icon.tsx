@@ -15,6 +15,7 @@ export const Icon: FunctionComponent<IconProps> = React.forwardRef<SVGSVGElement
   color = 'currentColor',
   horizontal = false,
   vertical = false,
+  preserveAspectRatio = true,
   viewBox = '0 0 24 24',
   rotate = 0,
   spin = false,
@@ -104,6 +105,7 @@ export const Icon: FunctionComponent<IconProps> = React.forwardRef<SVGSVGElement
     <svg
       ref={ref}
       viewBox={viewBox}
+      preserveAspectRatio={preserveAspectRatio ? undefined : 'none'}
       style={style}
       role={role}
       aria-labelledby={ariaLabelledby}
@@ -129,6 +131,7 @@ Icon.propTypes = {
     PropTypes.string
   ]),
   color: PropTypes.string,
+  preserveAspectRatio: PropTypes.bool,
   viewBox: PropTypes.string,
   horizontal: PropTypes.bool,
   vertical: PropTypes.bool,
@@ -150,6 +153,7 @@ Icon.defaultProps = {
   vertical: false,
   rotate: 0,
   spin: false,
+  preserveAspectRatio: true,
   viewBox: '0 0 24 24'
 };
 
